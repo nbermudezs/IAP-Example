@@ -14,6 +14,9 @@
 		E6294F151CC1AE6800AEB62D /* IAP_Example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6294F131CC1AE6800AEB62D /* IAP_Example.xcdatamodeld */; };
 		E6294F171CC1AE6800AEB62D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6294F161CC1AE6800AEB62D /* Assets.xcassets */; };
 		E6294F1A1CC1AE6800AEB62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6294F181CC1AE6800AEB62D /* LaunchScreen.storyboard */; };
+		E6294F241CC1AEB000AEB62D /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6294F231CC1AEB000AEB62D /* IAPHelper.m */; };
+		E6294F261CC1AEC100AEB62D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6294F251CC1AEC100AEB62D /* StoreKit.framework */; };
+		E6294F2A1CC1B13700AEB62D /* ExtendedIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6294F291CC1B13700AEB62D /* ExtendedIAPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		E6294F161CC1AE6800AEB62D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6294F191CC1AE6800AEB62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6294F1B1CC1AE6800AEB62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6294F221CC1AEB000AEB62D /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAPHelper.h; path = Classes/IAPHelper.h; sourceTree = "<group>"; };
+		E6294F231CC1AEB000AEB62D /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IAPHelper.m; path = Classes/IAPHelper.m; sourceTree = "<group>"; };
+		E6294F251CC1AEC100AEB62D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E6294F281CC1B13700AEB62D /* ExtendedIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtendedIAPHelper.h; path = Custom/ExtendedIAPHelper.h; sourceTree = "<group>"; };
+		E6294F291CC1B13700AEB62D /* ExtendedIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExtendedIAPHelper.m; path = Custom/ExtendedIAPHelper.m; sourceTree = "<group>"; };
+		E6294F2B1CC1B1A100AEB62D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Custom/Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6294F261CC1AEC100AEB62D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,7 @@
 		E6294EFB1CC1AE6800AEB62D = {
 			isa = PBXGroup;
 			children = (
+				E6294F251CC1AEC100AEB62D /* StoreKit.framework */,
 				E6294F061CC1AE6800AEB62D /* IAP-Example */,
 				E6294F051CC1AE6800AEB62D /* Products */,
 			);
@@ -60,6 +71,8 @@
 		E6294F061CC1AE6800AEB62D /* IAP-Example */ = {
 			isa = PBXGroup;
 			children = (
+				E6294F271CC1B11000AEB62D /* Custom */,
+				E6294F211CC1AE7400AEB62D /* Classes */,
 				E6294F0A1CC1AE6800AEB62D /* AppDelegate.h */,
 				E6294F0B1CC1AE6800AEB62D /* AppDelegate.m */,
 				E6294F0D1CC1AE6800AEB62D /* ViewController.h */,
@@ -80,6 +93,25 @@
 				E6294F081CC1AE6800AEB62D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6294F211CC1AE7400AEB62D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E6294F221CC1AEB000AEB62D /* IAPHelper.h */,
+				E6294F231CC1AEB000AEB62D /* IAPHelper.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E6294F271CC1B11000AEB62D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E6294F281CC1B13700AEB62D /* ExtendedIAPHelper.h */,
+				E6294F291CC1B13700AEB62D /* ExtendedIAPHelper.m */,
+				E6294F2B1CC1B1A100AEB62D /* Constants.h */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +145,7 @@
 				TargetAttributes = {
 					E6294F031CC1AE6800AEB62D = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 246HEUPQZ9;
 					};
 				};
 			};
@@ -155,7 +188,9 @@
 				E6294F0F1CC1AE6800AEB62D /* ViewController.m in Sources */,
 				E6294F151CC1AE6800AEB62D /* IAP_Example.xcdatamodeld in Sources */,
 				E6294F0C1CC1AE6800AEB62D /* AppDelegate.m in Sources */,
+				E6294F241CC1AEB000AEB62D /* IAPHelper.m in Sources */,
 				E6294F091CC1AE6800AEB62D /* main.m in Sources */,
+				E6294F2A1CC1B13700AEB62D /* ExtendedIAPHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "IAP-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nbermudezs.boilerplates.IAP-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -278,10 +316,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "IAP-Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nbermudezs.boilerplates.IAP-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
